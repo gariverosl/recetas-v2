@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header, nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto; /* Centra el formulario vertical y horizontalmente */
+    padding: 40px; /* Ajusta el espacio interior */
+    border: 1px solid #ddd; /* Borde más sutil */
+    border-radius: 12px; /* Bordes más redondeados */
+    background-color: #f9f9f9; /* Fondo ligeramente gris */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más sutil y elegante */
+    text-align: center; /* Centra el contenido del formulario */
+}
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container form div {
+    margin-bottom: 15px;
+}
+
+.login-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%; /* Toma todo el ancho del contenedor */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado entre campos */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    font-size: 16px;
+    box-sizing: border-box; /* Ajusta el tamaño incluyendo el padding */
+    transition: all 0.3s ease; /* Transición suave para hover/focus */
+}
+/* Estilo para el botón */
+.login-container button {
+    width: 100%; /* Botón de ancho completo */
+    padding: 12px;
+    background-color: #333; /* Color de fondo oscuro */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+
+.login-container button:hover {
+    background-color: #555;
+}
+
+/* Recetas Section */
+.recetas, .banners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.receta {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.receta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.receta p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Banner Section */
+.banners img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+.show-for-anonymous,
+.show-for-auth {
+    display: none; /* Por defecto ocultos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header y navegación */
+header {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block; /* Asegura que los enlaces sean visibles */
+}
+
+/* Estilos específicos para los elementos de autenticación */
+.show-for-anonymous,
+.show-for-auth {
+    display: none; /* Estado inicial oculto */
+}
+
+/* El resto de tus estilos... */
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #ff5722;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+#banners-comerciales {
+    text-align: center;
+}
+
+.banner {
+    margin: 10px 0;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff5722;
+    color: #fff;
+    margin-top: 20px;
+}

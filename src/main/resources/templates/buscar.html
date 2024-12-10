@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Recetas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Buscar Recetas</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <div class="show-for-auth">
+                <a href="/buscar">Buscar Recetas</a>
+                <a id="logoutBtn" href="#">Cerrar Sesión</a>
+            </div>
+            <a href="/login" class="show-for-anonymous">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <section>
+        <form action="/buscar" method="get">
+            <input type="text" name="nombre" placeholder="Escribe el nombre de la receta">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Resultados de la búsqueda</h2>
+        <!-- Los resultados se insertarán aquí dinámicamente -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aplicación de Recetas</p>
+    </footer>
+
+    <script src="/js/config.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/search.js"></script>
+</body>
+</html>

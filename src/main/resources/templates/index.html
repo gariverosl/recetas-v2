@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilos generales */
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Aplicación de Recetas</h1>
+        <nav>
+            <!-- Enlaces para usuarios no autenticados -->
+            <a href="/login" class="show-for-anonymous">Iniciar Sesión</a>
+            
+            <!-- Enlaces para usuarios autenticados -->
+            <div class="show-for-auth" style="display: inline-block;">
+                <a id="buscarRecetasBtn" href="/buscar">Buscar Recetas</a>
+                <a id="logoutBtn" href="#">Cerrar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="recetas-recientes">
+        <h2>Recetas Recientes</h2>
+        <ul>
+            <li th:each="receta : ${recetas}">
+                <strong th:text="${receta.nombre}">Nombre</strong> - <span th:text="${receta.tipoCocina}">Tipo</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="recetas-populares">
+        <h2>Recetas Populares</h2>
+        <ul>
+            <li><strong>Churrasco Italiano</strong> - Sandwich chileno con palta, tomate y mayonesa.</li>
+            <li><strong>Empanadas de Pino</strong> - Empanadas chilenas rellenas de carne, cebolla y huevo.</li>
+        </ul>
+    </section>
+
+    <section id="banners-comerciales">
+        <h2>Publicidad</h2>
+        <div class="banner">
+            <p>Ven a comer las mejores Hamburguesas de Todays Burger</p>
+            <img src="/images/hamburguesa.avif" alt="Publicidad de Cocina">
+        </div>
+        <div class="banner">
+            <p>Compra las Hamburguesas de Delicious Food</p>
+            <img src="/images/hamburguesa2.avif" alt="Publicidad de Ingredientes">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aplicación de Recetas</p>
+    </footer>
+
+    <!-- Scripts de autenticación -->
+    <script src="/js/config.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

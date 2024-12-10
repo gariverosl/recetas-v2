@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Receta - Aplicación de Recetas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #detalle-receta {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #detalle-receta h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+        #detalle-receta img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .detalles {
+            margin: 20px 0;
+        }
+        .detalles p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        .instrucciones {
+            margin-top: 20px;
+        }
+        .instrucciones ul {
+            padding: 0;
+            list-style: none;
+        }
+        .instrucciones li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #ffebee;
+            border-left: 5px solid #ff5722;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background: #ff5722;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Detalle de la Receta</h1>
+    <nav>
+        <a href="/">Inicio</a>
+        <div class="show-for-auth">
+            <a href="/buscar">Buscar Recetas</a>
+            <a id="logoutBtn" href="#">Cerrar Sesión</a>
+        </div>
+        <a href="/login" class="show-for-anonymous">Iniciar Sesión</a>
+    </nav>
+</header>
+
+<section id="detalle-receta">
+    <h2 th:text="${nombre}">Nombre de la receta</h2>
+    <img src="/images/paella.jpg" alt="Imagen de la receta" width="400">
+
+    <div class="detalles">
+        <p><strong>Tipo de cocina:</strong> <span th:text="${tipoCocina}">Española</span></p>
+        <p><strong>Ingredientes:</strong> <span th:text="${ingredientes}">Arroz, Azafrán, Mariscos</span></p>
+        <p><strong>Dificultad:</strong> <span th:text="${dificultad}">Media</span></p>
+        <p><strong>Tiempo de cocción:</strong> <span th:text="${tiempoCoccion}">45 minutos</span></p>
+    </div>
+
+    <section class="instrucciones">
+        <h3>Instrucciones de Preparación</h3>
+        <ul>
+            <li th:each="instruction : ${instrucciones}" th:text="${instruction}">Instrucción</li>
+        </ul>
+    </section>
+</section>
+
+<footer>
+    <p>&copy; 2024 Aplicación de Recetas | Todos los derechos reservados</p>
+</footer>
+ <!-- Scripts necesarios para la autenticación -->
+ <script src="/js/config.js"></script>
+ <script src="/js/auth.js"></script>
+</body>
+
+</html>
