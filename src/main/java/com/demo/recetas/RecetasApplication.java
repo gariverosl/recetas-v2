@@ -22,5 +22,6 @@ public class RecetasApplication {
         String encodedPassword2 = encoder.encode(password2);
     
         System.out.println("Hash generado para usuario2: " + encodedPassword2);}*/
+    
     }
 }
